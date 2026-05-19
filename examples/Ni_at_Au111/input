@@ -1,3 +1,0 @@
-$wavefunc z_low_limit=8.2 z_up_limit=14.05 $end
-$hybridization ww_i=-5.d0 ww_f=5.d0 num_ww=10001 width=0.01d0 $end
-$pade npade=600 T=0.001d0 num_tt=5501 tt_f=250.d0 crit=5.0d-9 $end

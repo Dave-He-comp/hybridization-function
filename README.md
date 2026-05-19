@@ -4,7 +4,9 @@ Hybridization Function Computational and Analysis Toolkit for Open Quantum Syste
 
 ## Overview
 
-![](header.png)
+<p align="center">
+  <img src="/images/header.png" width="300">
+</p>
 
 Used to calculate the hybridization function between an adsorbed molecule and a surface based on DFT results, and subsequently combine with the HEOM-QUICK2 program to simulate differential conductance spectra, enabling the simulation of realistic systems without relying on semi-empirical parameters.
 
@@ -217,8 +219,12 @@ The files `spin-1-coupling-details` and `spin-2-coupling-details` contain detail
 
 In this section, the hybridization function of a Ni atom adsorbed on the Au(111) surface is calculated as an example. The structure of the system is shown in Figure 1.
 
-![](structure.png)
-Figure 1
+<p align="center">
+  <img src="/images/structure.png" width="300">
+</p>
+<p align="center">
+  Figure 1
+</p>
 
 ### Identification of the SOMO
 
@@ -226,8 +232,12 @@ The molecular (atomic) Kondo state originates from the interaction between the S
 
 A practical approach is to plot the PDOS of the Ni atom and locate the energy range where the densities of states for the two spin channels differ significantly.
 
-![](PDOS.png)
-Figure 2
+<p align="center">
+  <img src="/images/PDOS.png" width="500">
+</p>
+<p align="center">
+  Figure 2
+</p>
 
 As shown in the Figure 2, a pronounced peak with a large spin asymmetry appears within the energy range $\left[-0.2,\,0.0\right]\,\text{eV}$.
 
@@ -240,17 +250,28 @@ Next, inspect the relevant section of the `EIGENVAL` file generated from the VAS
     354          2.914623        3.038701   1.000000   0.979495
     355          3.007703        3.080226   0.998251   0.807558
 ```
-Table 1
 
-![](SOMO.png)
-Figure 3
+<p align="center">
+  Table 1
+</p>
+
+<p align="center">
+  <img src="/images/SOMO.png" width="300">
+</p>
+<p align="center">
+  Figure 3
+</p>
 
 Record the index of this band and write it into the `chosen_sys_bands` file.
 
 Following the procedure described above, the hybridization function can then be calculated.
 
-![](hyb.png)
-Figure 4
+<p align="center">
+  <img src="/images/hyb.png" width="500">
+</p>
+<p align="center">
+  Figure 4
+</p>
 
 The files `spin-n-coupling-details` ($n=1,2$) contain detailed information about the contributions of individual orbital pairs to the hybridization function, as shown in Table 2.
 
@@ -261,7 +282,10 @@ The files `spin-n-coupling-details` ($n=1,2$) contain detailed information about
        353         315 -0.1976938000E+01  0.2739210984E-03 -0.5656942888E-03  0.6285243007E-03
        353         316 -0.1967995000E+01  0.1927462109E-04 -0.3612035496E-04  0.4094131240E-04
 ```
-Table 2
+
+<p align="center">
+  Table 2
+</p>
 
 Here:
 - `No. sys` represents the band index of the molecule (atom),

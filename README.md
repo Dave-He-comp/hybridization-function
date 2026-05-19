@@ -168,33 +168,28 @@ grep 'fermi' OUTCAR_SYS > fermi_sys
 grep 'fermi' OUTCAR_SUB > fermi_sub
 ```
 
-Perform FFT transformation of the wavefunctions:
-
-```bash
-python 3D_FFT.py > out_py
-```
-
 Extract the wavefunctions:
 
 ```bash
+python 3D_FFT.py > out_py
 ifort generate_wavefun.f90 -qopenmp -assume byterecl -o generate_wavefun.x  # Compile the program
 ./generate_wavefun.x > out_wavefunc
 ```
 
-Perform inverse FFT transformation:
+Perform FFT transformation of the wavefunctions:
 
 ```bash
 python fft_wavefunc.py > out_fft
 ```
 
-Apply the zeroing operation to the selected spatial wavefunctions:
+Compute the hybridization function:
 
 ```bash
 ifort limited_overlap.f90 -qopenmp -assume byterecl -o limited_overlap.x  # Compile the program
 ./limited_overlap.x > out_overlap
 ```
 
-Perform Prony decomposition:
+Perform Prony pre-decomposition:
 
 ```bash
 ifort -mkl prelude_prony.f90 -o prelude_prony.x  # Compile the program

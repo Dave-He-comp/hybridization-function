@@ -234,9 +234,9 @@ A practical approach is to plot the PDOS of the Ni atom and locate the energy ra
   Figure 2
 </p>
 
-As shown in the Figure 2, a pronounced peak with a large spin asymmetry appears within the energy range $\left[-0.2,\,0.0\right]\,\text{eV}$.
+As shown in the Figure 2, a pronounced peak with a large spin asymmetry appears within the energy range $\left[-0.2,0.0\right]\text{eV}$.
 
-Next, inspect the relevant section of the `EIGENVAL` file generated from the VASP SCF calculation, as shown in Table 1, to identify the band within the selected energy range. It can be seen that the energy of band No. 353 in the spin-down channel is $E-E_F=-0.147\,\text{eV}$ ($E_F=3.111\,\text{eV}$), which is consistent with the peak position in the PDOS and therefore corresponds to the SOMO. The corresponding orbital is shown in Figure 3.
+Next, inspect the relevant section of the `EIGENVAL` file generated from the VASP SCF calculation, as shown in Table 1, to identify the band within the selected energy range. It can be seen that the energy of band No. 353 in the spin-down channel is $E-E_F=-0.147\text{eV}$ ($E_F=3.111\text{eV}$), which is consistent with the peak position in the PDOS and therefore corresponds to the SOMO. The corresponding orbital is shown in Figure 3.
 
 ```
     351          2.549592        2.588771   1.000000   1.000000
